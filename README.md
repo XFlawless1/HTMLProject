@@ -1,12 +1,12 @@
 # HTMLProject
-#Income Tax Website
-##Languages used:
-*HTML
-*PHP
-*SQL
-*JS
-#About
+# Income Tax Website
+## Languages used:
+* HTML
+* PHP
+* SQL
+* JS
+# About
 
-#Credits
-##Shrey Ratna - 11915128 
-##Nandakishore - 
+# Credits
+## Shrey Ratna - 11915128 
+## Nandakishore - 
