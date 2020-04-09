@@ -109,7 +109,7 @@ $error="Something went wrong. Please try again";
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="text-center text-bold mt-2x">Register</h1>
+						<h1 class="text-center text-bold mt-2x">Register to Income Tax Management</h1>
                         <div class="hr-dashed"></div>
 						<div class="well row pt-2x pb-3x bk-light text-center">
                          <form method="post" class="form-horizontal" enctype="multipart/form-data" name="regform" onSubmit="return validate();">
