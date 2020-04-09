@@ -16,6 +16,7 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 {
 }
+$salary=$result->income;
 ?>
 <!doctype html>
 <html lang="en" class="no-js">
@@ -85,6 +86,41 @@ foreach($results as $result)
   <p><b>Name: <?php echo htmlentities($result->name);?></b>
   <p><b>PAN Number: <?php echo htmlentities($result->panno);?></b>
   <p><b>Income: <?php echo htmlentities($result->income);?></b>
+    <?php
+    function getTax($salary)
+    {
+    $band1_top=250000;
+    $band2_top=500000;
+    $band3_top=1000000;
+    $band1_rate=0;
+    $band2_rate=0.05+0.2;
+    $band3_rate=10000+0.2;
+    $band4_rate=112000+0.3;
+    $band1 = $band2 = $band3 = $band4 = 0;
+    $starting_income = $income;
+    if($income > $band3_top) {
+        $band4 = ($income - $band3_top) * $band4_rate;
+        $income = $band3_top;
+    }
+
+    if($income > $band2_top) {
+        $band3 = ($income - $band2_top) * $band3_rate;
+        $income = $band2_top;
+    }
+
+    if($income > $band1_top) {
+        $band2 = ($income - $band1_top) * $band2_rate;
+        $income = $band1_top;
+    }
+    $band1 = $income * $band1_rate;
+    $total_tax_paid = $band1 + $band2 + $band3 + $band4;
+    $sql = "UPDATE `users` SET `taxtbp` = taxtbp=(:taxtbp)";
+    $query = $dbh->prepare($sql);
+    $query-> bindParam(':taxtbp', $taxtbp, PDO::PARAM_STR);
+    $query->execute();
+    echo "Tax paid on $income is $total_tax_paid";
+    }
+    ?>
 </div>
 <div class="faq-table">
 							<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">

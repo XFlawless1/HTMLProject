@@ -161,3 +161,23 @@
   from {opacity: .4}
   to {opacity: 1}
 }
+.important-links {
+  width: 200px; /* Set a width if you like */
+}
+
+.important-links a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.important-links a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.important-links a.active {
+  background-color: #3399ff; /* Add a green color to the "active/current" link */
+  color: white;
+}
