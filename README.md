@@ -17,3 +17,8 @@ Install any apache server of your preference along with a SQL server, upload the
 ## Shrey Ratna - 11915128 
 ## Nandakishore - 
 ## Ajay (UCP)
+!(https://i.imgur.com/FPxWtoU.png)
+!(https://i.imgur.com/kiqGY0O.png)
+!(https://i.imgur.com/aXjcr5C.png)
+!(https://i.imgur.com/iVKZ9Yw.png)
+!(https://i.imgur.com/bHTAh0W.png)
